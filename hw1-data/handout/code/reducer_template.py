@@ -26,8 +26,8 @@ last_bucket = None
 duplicates = []
 m = {}
 
-# for line in sys.stdin:
-for line in file("mapper-out.txt"):
+for line in sys.stdin:
+# for line in file("mapper-out.txt"):
     line = line.strip()
     if not line:
         raise ValueError("Why is the line empty")

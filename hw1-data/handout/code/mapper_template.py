@@ -19,15 +19,15 @@ if __name__ == "__main__":
 
     aVector = np.random.randint(low=0, high =500, size=rowsInBand)
     b = np.random.randint(low=0, high=500, size=1)
-    nBuckets = 20011
+    nBuckets = 997
 
     hashParams = np.random.randint(low=0, high=1000, size=(numberOfHash,2))
     scores = set([])
 
     count = 0
 
-    # for line in sys.stdin:
-    for line in file("../data/training.txt"):
+    for line in sys.stdin:
+    # for line in file("../data/training.txt"):
         # count+=1
         video_id = int(line[6:15])
         
