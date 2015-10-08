@@ -6,8 +6,10 @@ import sys
 
 
 def print_duplicates(videos):
-    # unique = np.unique(videos)
-    # print videos
+    """Given a list of candidate duplicates (videoID, shingles), 
+    do pairwise comparison with Jacquardian similarity.
+
+    """
     videos = sorted(videos, key = lambda x: int(x[0]))
     for i in xrange(len(videos)):
         for j in xrange(i + 1, len(videos)):
@@ -43,6 +45,7 @@ for line in sys.stdin:
 
     if bucket == last_bucket:
         if band in m:
+            # we only care about buckets from the same bands
             m[band].append((videoId, video))
         else:
             m[band] = [(videoId, video)]
